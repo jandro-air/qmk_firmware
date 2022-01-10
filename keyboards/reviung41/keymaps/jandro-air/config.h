@@ -1,4 +1,4 @@
-/* Copyright 2021 @Ciutadellla
+/* 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  */
 
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 175
 #define TAPPING_TOGGLE 2
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_LAYERS_RETAIN_VA
