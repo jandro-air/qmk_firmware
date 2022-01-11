@@ -111,25 +111,12 @@ static td_tap_t ql_tap_state = {
 void ql_finished(qk_tap_dance_state_t *state, void *user_data) {
     ql_tap_state.state = cur_dance(state);
     switch (ql_tap_state.state) {
-        /*case TD_SINGLE_TAP:
-            tap_code(KC_QUOT);
-            break; */
         case TD_SINGLE_HOLD:
             layer_on(_UP1);
             break;
         case TD_DOUBLE_HOLD:
             layer_on(_UP2);
             break;
-       /* case TD_DOUBLE_TAP:
-            // Check to see if the layer is already set
-            if (layer_state_is(_MY_LAYER)) {
-                // If already set, then switch it off
-                layer_off(_MY_LAYER);
-            } else {
-                // If not already set, then switch the layer on
-                layer_on(_MY_LAYER);
-            }
-            break; */
         default:
             break;
     }
@@ -154,19 +141,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // Light LED 11 RED when LOW is active
 const rgblight_segment_t PROGMEM my_low_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 1, HSV_RED}
+    {11, 1, HSV_RED}
 );
 // Light LED 11 CYAN when UP1 is active
 const rgblight_segment_t PROGMEM my_up1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 1, HSV_CYAN}
+    {11, 1, HSV_CYAN}
 );
 // Light LED 11 PURPLE when UP2 is active
 const rgblight_segment_t PROGMEM my_up2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 1, HSV_PURPLE}
+    {11, 1, HSV_PURPLE}
 );
 // Light LED 11 GREEN when ADJ is active
 const rgblight_segment_t PROGMEM my_adj_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 1, HSV_GREEN}
+    {11, 1, HSV_GREEN}
 );
 
 // Now define the array of layers. Later layers take precedence
@@ -181,16 +168,6 @@ void keyboard_post_init_user(void) {
     // Enable the LED layers
     rgblight_layers = my_rgb_layers;
 }
-
-/*bool led_update_user(led_t led_state) {
-    rgblight_set_layer_state(0, led_state.my_low_layer);
-    return true;
-}*/
-
-/*layer_state_t default_layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(0, layer_state_cmp(state, _LOW));
-    return state;
-}*/
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(0, layer_state_cmp(state, _LOW));
