@@ -141,19 +141,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 // Light LED 11 RED when LOW is active
 const rgblight_segment_t PROGMEM my_low_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {10, 1, HSV_RED}
+    {5, 2, HSV_AZURE}
 );
 // Light LED 11 CYAN when UP1 is active
 const rgblight_segment_t PROGMEM my_up1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {10, 1, HSV_CYAN}
+    {5, 2, HSV_ORANGE}
 );
 // Light LED 11 PURPLE when UP2 is active
 const rgblight_segment_t PROGMEM my_up2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {10, 1, HSV_PURPLE}
+    {5, 2, HSV_MAGENTA}
 );
 // Light LED 11 GREEN when ADJ is active
 const rgblight_segment_t PROGMEM my_adj_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {10, 1, HSV_GREEN}
+    {5, 2, HSV_GOLD}
 );
 
 // Now define the array of layers. Later layers take precedence
