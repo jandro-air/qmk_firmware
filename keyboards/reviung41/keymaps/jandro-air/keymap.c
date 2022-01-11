@@ -153,7 +153,7 @@ const rgblight_segment_t PROGMEM my_up2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 // Light LED 11 GREEN when ADJ is active
 const rgblight_segment_t PROGMEM my_adj_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {4, 2, HSV_GOLD}
+    {4, 2, HSV_RED}
 );
 
 // Now define the array of layers. Later layers take precedence
